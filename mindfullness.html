@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mindfullness.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="home.html" class="logo">mindEase</a>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="meditation.html">Meditation</a></li>
+          <li><a href="#" class="active">Mindfulness</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="Aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <a href="sigin-login.html" class="btn login-btn">Login</a>
+        <a href="sigin-login.html" class="btn signup-btn">Sign Up</a>
+      </div>
+    </nav>
+    <!-- Mindfulness Methods Section -->
+    <section class="mindfulness-methods">
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search for mindfulness sessions..." />
+      </div>
+
+      <h1>Mindfulness Methods</h1>
+      <div class="methods-container">
+        <div class="method">
+          <img src="img/1st.jpeg" alt="Mindfulness Breathing" />
+          <div class="method-info">
+            <h3>Mindfulness Breathing</h3>
+            <p>
+              A practice focusing on the breath to bring awareness and calmness.
+            </p>
+            <button class="start-btn">Start</button>
+          </div>
+        </div>
+        <div class="method">
+          <img src="img/2.jpeg" alt="Body Scan" />
+          <div class="method-info">
+            <h3>Body Scan</h3>
+            <p>
+              Progressively focusing on each part of the body to enhance
+              awareness.
+            </p>
+            <button class="start-btn">Start</button>
+          </div>
+        </div>
+        <div class="method">
+          <img src="img/3.jpeg" alt="Mindful Observation" />
+          <div class="method-info">
+            <h3>Mindful Observation</h3>
+            <p>
+              Paying attention to the present moment and the surroundings
+              without judgment.
+            </p>
+            <button class="start-btn">Start</button>
+          </div>
+        </div>
+        <div class="method">
+          <img src="img/4.jpeg" alt="Mindful Listening" />
+          <div class="method-info">
+            <h3>Mindful Listening</h3>
+            <p>
+              Listening attentively to sounds or music, noticing their effects
+              on the mind.
+            </p>
+            <button class="start-btn">Start</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Popup Modal for Mindfulness Breathing -->
+    <div class="popup-modal" id="popupModalBreathing">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popupModalBreathing')">&times;</span>
+            <img src="img/4.jpeg" alt="Mindfulness Breathing" class="popup-image" />
+            <h3>Mindfulness Breathing</h3>
+            <div class="steps">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Find a Comfortable Position: Choose a comfortable seated position, either on a chair or on the floor. Ensure your back is upright but relaxed, and place your hands in a comfortable position, such as resting on your knees or in your lap.</li>
+                    <li>Close Your Eyes or Soften Your Gaze: You can either gently close your eyes or maintain a soft gaze with your eyes partially closed. This helps minimize distractions from your surroundings.</li>
+                    <li>Invite Relaxation: Take a moment to notice any tension in your body. Consciously relax those areas, allowing yourself to settle into the present moment.</li>
+                    <li>Tune Into Your Breath: Begin to notice the natural rhythm of your breath without trying to change it. Focus on the sensations of inhaling and exhaling, feeling the air move in and out of your body.</li>
+                    <li>Observe Your Breathing: Pay attention to where you feel your breath most prominently—whether in your abdomen, chest, or nostrils. Notice how each breath feels as it enters and leaves your body.</li>
+                    <li>Acknowledge Wandering Thoughts: As you practice, you may notice that your mind wanders to other thoughts or distractions. Acknowledge this without judgment and gently bring your focus back to your breath.</li>
+                    <li>Count Your Breaths (Optional): For added structure, you can count each inhale and exhale to maintain focus. For example, inhale for a count of four, hold for two, and exhale for six. Adjust the counts to what feels comfortable for you.</li>
+                    <li>Practice Deep Breathing: Incorporate deep breathing by inhaling deeply through your nose, allowing your abdomen to rise, and then exhaling slowly through pursed lips. This helps enhance relaxation and mindfulness.</li>
+                    <li>Set a Timer: Decide how long you want to practice mindfulness breathing—start with five minutes and gradually increase as you become more comfortable with the practice.</li>
+                    <li>Reflect After Your Practice: Once you've completed your session, take a moment to notice how you feel physically and emotionally. Appreciate the time you've dedicated to this practice and how it contributes to your overall well-being.</li>
+                </ol>
+            </div>
+            <div class="time-counter">
+                <h4>Time Remaining: <span id="timeRemaining">5:00</span></h4>
+                <button class="start-timer-btn" onclick="startTimer()">Start Timer</button>
+            </div>
+            <button class="youtube-link-btn" onclick="openYouTubeLink()">Watch on YouTube</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="mindfullness.js"></script>
+
+    </body>
+</html>

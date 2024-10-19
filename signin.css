@@ -1,0 +1,146 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Inria Serif, serif; /* Added 'serif' as fallback */
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Start from the top */
+    align-items: center; /* Center elements horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Optional: Add some padding to prevent elements from touching the edges */
+    background: url('img/mindfulness.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire background */
+}
+
+
+.welcome-message {
+    text-align: center; /* Center the message */
+    margin-bottom: 30px; /* Increased space below the message to prevent overlap */
+}
+
+.welcome-message h1 {
+    font-size: 24px; /* Font size for the welcome message */
+    color: #333; /* Text color */
+}
+
+/* Form container styling */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    margin-top: 20px; /* Optional: Add some space above the form container */
+}
+
+/* Form styling */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input field styling */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button styling */
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0; /* Add top and bottom margin for spacing */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #444; /* Darker shade for hover effect */
+}
+
+/* Social login button styling */
+.social-login {
+    margin: 15px 0;
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Fixed width for circular buttons */
+    height: 40px; /* Fixed height for circular buttons */
+    border: none;
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    color: white; /* Icon color */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Facebook and Google button colors */
+.social-btn.facebook {
+    background-color: #3b5998; /* Facebook blue */
+}
+
+.social-btn.google {
+    background-color: #db4437; /* Google red */
+}
+
+/* Hover effect for social buttons */
+.social-btn:hover {
+    opacity: 0.8; /* Slightly dim on hover */
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Icon styling */
+.social-btn i {
+    font-size: 18px; /* Icon size */
+}
+
+/* Additional spacing for the signup link */
+.form p {
+    margin-top: 10px; /* Space above the link */
+    font-size: 14px; /* Slightly smaller font for the link */
+}
+
+/* Skip button styling */
+.skip-btn {
+    background-color: #000000; /* Optional: Change color */
+    color: #fff; /* White text */
+    padding: 10px; /* Same padding as other buttons */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.skip-btn:hover {
+    background-color: #999999b7; /* Darker shade on hover */
+}

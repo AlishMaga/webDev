@@ -1,0 +1,135 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inria Serif";
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: url('img/homebg.webp') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensures the image covers the whole page */
+}
+
+/* Navigation bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    color: #000;
+    padding-left: 50px;
+}
+
+.logo {
+    color: #000;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+/* Navigation links hover effect */
+.nav-links a:hover, .nav-links a.active {
+    color: #007bff; /* Same color as hover effect */
+    border-bottom: 2px solid #007bff; /* Same border as hover effect */
+}
+
+
+.navbar-right {
+    padding-right: 50px;
+}
+
+.navbar-right .btn {
+    margin-left: 20px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.login-btn {
+    color: #000;
+}
+
+.signup-btn {
+    background-color: #000000;
+    color: #fff;
+}
+
+.login-btn:hover {
+    background-color: transparent;
+    border-color: #050505;
+}
+
+.signup-btn:hover {
+    background-color: transparent;
+    border-color: #007bff;
+}
+
+/* Styling for centered welcome text */
+.welcome-text {
+    text-align: center;
+    color: #000;
+    margin-top: 10px;
+}
+
+.welcome-text p {
+    font-size: 46px;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+/* Bold the strong/b elements explicitly */
+strong, b {
+    font-weight: bold;
+}
+
+/* Get Started button styling */
+.getstarted {
+    background-color: #000000; /* Match signup button background */
+    color: #fff; /* White text color */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 25px; /* Rounded corners */
+    border: 2px solid transparent; /* Initial border */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    text-decoration: none; /* No underline */
+}
+
+.getstarted:hover {
+    background-color: transparent; /* Change to transparent on hover */
+    border-color: #007bff; /* Blue border on hover */
+}

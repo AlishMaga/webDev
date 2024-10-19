@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="signin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="welcome-message">
+        <h1>Welcome to mindEase</h1>
+    </div>
+    
+    <!-- Form Container -->
+    <div class="form-container">
+        <!-- Login Form -->
+        <div class="form" id="loginForm">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit" class="btn">Login</button>
+            <p>Login with</p>
+            <div class="social-login">
+                <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn google"><i class="fab fa-google"></i></button>
+            </div>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up here</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form" id="signupForm" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Username" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit" class="btn">Sign Up</button>
+            <p>Sign up with</p>
+            <div class="social-login">
+                <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn google"><i class="fab fa-google"></i></button>
+            </div>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+        </div>
+        <a href="home.html">
+            <button class="btn skip-btn">Skip</button> <!-- Skip button -->
+        </a>
+        
+    </div>
+    
+
+    <script src="signin.js"></script>
+  </body>
+</html>

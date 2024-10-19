@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inria Serif";
+    margin: 0;
+    background: url('img/mindfulness.jpg') no-repeat center center fixed; /* Background image */
+    background-size: 100% 970px; /* Adjust percentage for the unzoom effect */
+}
+
+
+/* Navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    color: #000;
+    padding-left: 50px;
+}
+
+.logo {
+    color: #000;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+/* Navigation links hover effect */
+.nav-links a:hover, .nav-links a.active {
+    color: #e100ff; /* Same color as hover effect */
+    border-bottom: 2px solid #e100ff; /* Same border as hover effect */
+}
+
+
+.navbar-right {
+    padding-right: 50px;
+}
+
+.navbar-right .btn {
+    margin-left: 20px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.login-btn {
+    color: #000;
+}
+
+.signup-btn {
+    background-color: #000000;
+    color: #fff;
+}
+
+.login-btn:hover {
+    background-color: transparent;
+    border-color: #050505;
+}
+
+.signup-btn:hover {
+    background-color: transparent;
+    border-color: #007bff;
+}
+/* Updated search bar styles */
+.search-bar {
+    margin: 20px auto;
+    position: relative; /* Position relative for the icon positioning */
+    width: 50%; /* Make the search bar longer */
+}
+
+/* Styling for the search input */
+.search-bar input {
+    width: 100%; /* Full width for the input field */
+    padding: 12px 40px; /* Padding for space around the icon */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    font-size: 16px; /* Font size */
+}
+
+/* Adding a search icon inside the input */
+.search-bar::before {
+    content: "\1F50D"; /* Unicode character for the search icon */
+    position: absolute;
+    right: 15px; /* Position the icon inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px; /* Icon size */
+    color: #333; /* Icon color */
+    pointer-events: none; /* Prevent interaction with the icon */
+}
+
+/* Mindfulness Methods Heading */
+.mindfulness-methods h1 {
+    font-size: 36px; /* Adjust the size as needed */
+    color: #333; /* Ensure the color is set */
+    margin-bottom: 30px; /* Space below the heading */
+    text-align: center; /* Center the heading */
+}
+
+
+/* Mindfulness Methods Section */
+.mindfulness-methods {
+    margin-top: 80px; /* Space below the navbar */
+    width: 100%;
+    height: calc(100vh - 80px); /* Full height minus navbar */
+    background: url('img/mindfulness.jpg') no-repeat center center; /* Background image for the main section */
+    background-size: cover; /* Cover the entire main section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    gap: 40px;
+}
+
+/* Methods Container */
+.methods-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 30px; /* Space between the methods */
+    width: 100%;
+    max-width: 1200px; /* Optional: Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Optional: Add some padding around the container */
+}
+
+/* Method Styling */
+.method {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 200px; /* Fixed height for all methods */
+    transition: transform 0.3s ease;
+}
+
+/* Method Image Styling */
+.method img {
+    width: 150px; /* Fixed width for the image */
+    height: 150px; /* Fixed height for the image */
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover; /* Maintain aspect ratio while filling the space */
+}
+
+/* Method Information Styling */
+.method-info {
+    text-align: left;
+    flex: 1; /* Take up remaining space */
+}
+
+/* Heading and Description Styling */
+.method-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.method-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Start Button Styling */
+.start-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #444444;
+}
+
+/* Hover Effect */
+.method:hover {
+    transform: scale(1.02);
+}
+
+/* Popup Modal Styles */
+.popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #fff; /* White */
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative; /* Position relative for close button */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-image {
+    width: 100%; /* Adjust image width */
+    height: 200px; /* Fixed height for the image */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover; /* Crop the image to maintain aspect ratio */
+}
+
+
+.steps {
+    margin: 15px 0;
+}
+
+.steps h4 {
+    margin-bottom: 10px;
+}
+
+.steps ol {
+    padding-left: 20px; /* Indent for ordered list */
+}
+
+.time-counter {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.start-timer-btn,
+.youtube-link-btn {
+    background-color: #4caf50; /* Green */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.start-timer-btn:hover,
+.youtube-link-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

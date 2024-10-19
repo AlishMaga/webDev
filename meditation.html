@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meditation</title>
+    <link rel="stylesheet" href="meditation.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="home.html" class="logo">mindEase</a>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#" class="active">Meditation</a></li>
+          <li><a href="mindfullness.html">Mindfulness</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="Aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <a href="sigin-login.html" class="btn login-btn">Login</a>
+        <a href="sigin-login.html" class="btn signup-btn">Sign Up</a>
+      </div>
+    </nav>
+
+    <!-- Main section -->
+    <main class="main-content">
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search for meditation sessions..." />
+      </div>
+
+      <!-- Featured section -->
+      <h2 class="featured-text">Featured Meditation Session</h2>
+
+      <!-- Transparent square with photo and description -->
+      <!-- Featured Meditation Session -->
+      <div class="featured-session" onclick="showFeaturedPopup()">
+        <div class="session-photo">
+            <img src="img/top.jpeg" alt="Meditation Session" />
+        </div>
+        <div class="session-description">
+            <h3>30 Days Breathing Exercise</h3>
+            <p>
+                The "30 Days Breathing Exercise" program offers daily guided
+                breathwork to reduce stress, boost energy, and enhance mindfulness.
+                It gradually builds intensity to improve lung capacity and mental
+                clarity. Commit to a few minutes daily for a calmer, healthier you.
+            </p>
+        </div>
+        <button class="start-btn1">Start</button>
+      </div>
+
+      <!-- Popup Modal for Featured Session -->
+      <div id="featuredPopupModal" class="popup-modal">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeFeaturedPopup()">&times;</span>
+            <div class="popup-photo">
+                <img id="featuredPopupImage" src="img/top.jpeg" alt="Day Image" />
+            </div>
+            <div class="popup-description">
+                <h3 id="featuredPopupTitle">Day 1: Breathing Exercise</h3>
+                <p id="featuredPopupText">
+                    Day 1 starts with a simple 5-minute breathing exercise designed
+                    to help you become aware of your breath and begin to reduce stress.
+                </p>
+            </div>
+            <!-- Navigation for Days -->
+            <div class="day-navigation">
+                <button onclick="changeDay(-1)">Previous Day</button>
+                <span id="currentDay">Day 1</span>
+                <button onclick="changeDay(1)">Next Day</button>
+            </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Meditation Categories Section -->
+    <section class="meditation-categories">
+      <h2>Meditation Categories</h2>
+      <div class="categories-container">
+        <div class="category" onclick="showPopup('Daily Meditation', 'img/1st.jpeg')">
+          <img src="img/1st.jpeg" alt="Daily Meditation" />
+          <h3>Daily Meditation</h3>
+          <button class="start-btn">Start</button>
+        </div>
+        <div class="category" onclick="showPopup('Sleep Meditation', 'img/2.jpeg')">
+          <img src="img/2.jpeg" alt="Sleep Meditation" />
+          <h3>Sleep Meditation</h3>
+          <button class="start-btn">Start</button>
+        </div>
+        <div class="category" onclick="showPopup('Focused', 'img/3.jpeg')">
+          <img src="img/3.jpeg" alt="Focused" />
+          <h3>Focused</h3>
+          <button class="start-btn">Start</button>
+        </div>
+        <div class="category" onclick="showPopup('Mantra Meditation', 'img/4.jpeg')">
+          <img src="img/4.jpeg" alt="Mantra Meditation" />
+          <h3>Mantra</h3>
+          <button class="start-btn">Start</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div class="popup-modal" id="popupModal">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img src="" alt="Meditation" class="popup-image" id="popupImage" />
+        <h3 id="popupTitle">Meditation Title</h3>
+        <div class="gender-selection">
+          <h4>Select Voice for the Meditation</h4>
+          <label>
+            <input type="radio" name="voice" value="male" checked /> Male
+          </label>
+          <label>
+            <input type="radio" name="voice" value="female" /> Female
+          </label>
+        </div>
+        <div class="time-selection">
+          <h4>Select time duration</h4>
+          <select id="timeSelect">
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+          </select>
+        </div>
+        <!-- Music player controls -->
+        <div class="music-player">
+          <i class="play-icon" onclick="togglePlayPause()">&#9654;</i> <!-- Play icon -->
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span id="currentTime">0:00</span> / <span id="totalTime">5:00</span> <!-- Example duration -->
+        </div>
+
+      </div>
+    </div>
+
+    <script src="meditation.js"></script>
+  </body>
+</html>
