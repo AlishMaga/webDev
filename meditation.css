@@ -8,8 +8,8 @@
 body {
     font-family: "Inria Serif";
     margin: 0;
-    background: url('img/meditaionPage.jpg') no-repeat center center fixed; /* Background image */
-    background-size: 100% 970px; /* Adjust percentage for the unzoom effect */
+    /* background: url('img/meditaionPage.jpg') no-repeat center center fixed;
+    background-size: 100% 970px; */
 }
 
 
@@ -17,11 +17,15 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    z-index: 1000; /* Make sure navbar is on top */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    background: url('img/meditaionPage.jpg') no-repeat center center fixed;
+    background-size: cover; /* Adjust the size to cover */
 }
 
 .navbar-left {
@@ -97,11 +101,11 @@ body {
 
 /* Main content styles */
 .main-content {
-    margin-top: 80px; /* Space below the navbar */
+    margin-top: 0; /* Remove the margin-top to align with the fixed navbar */
     width: 100%;
-    height: calc(100vh - 80px); /* Full height minus navbar */
-    background: url('img/meditaionPage.jpg') no-repeat center center; /* Background image for the main section */
-    background-size: cover; /* Cover the entire main section */
+    height: 100vh; /* Full height of the viewport */
+    background: url('img/meditaionPage.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,11 +225,11 @@ body {
 
 /* Meditation Categories Section */
 .meditation-categories {
-    margin-top: 80px; /* Space below the navbar */
+    margin-top: 0;
     width: 100%;
-    height: calc(100vh - 80px); /* Full height minus navbar */
-    background: url('img/meditaionPage.jpg') no-repeat center center; /* Background image for the main section */
-    background-size: cover; /* Cover the entire main section */
+    height: 100vh;
+    background: url('img/meditaionPage.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;

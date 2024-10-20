@@ -21,6 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    z-index: 1000;
 }
 
 .navbar-left {
@@ -97,7 +98,7 @@ body {
 .search-bar {
     margin: 20px auto;
     position: relative; /* Position relative for the icon positioning */
-    width: 50%; /* Make the search bar longer */
+    width: 40%; /* Make the search bar longer */
 }
 
 /* Styling for the search input */
@@ -133,11 +134,9 @@ body {
 
 /* Mindfulness Methods Section */
 .mindfulness-methods {
-    margin-top: 80px; /* Space below the navbar */
+    margin-top: 0px; /* Space below the navbar */
     width: 100%;
-    height: calc(100vh - 80px); /* Full height minus navbar */
-    background: url('img/mindfulness.jpg') no-repeat center center; /* Background image for the main section */
-    background-size: cover; /* Cover the entire main section */
+    height: 100vh; /* Full height minus navbar */
     display: flex;
     justify-content: center;
     align-items: center;
