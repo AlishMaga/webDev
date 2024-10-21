@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Inria Serif";
+    font-family: "Inria Serif", serif;
     height: 100vh;
     margin: 0;
     display: flex;
@@ -27,6 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    animation: fadeIn 1s; /* Fade-in animation for the navbar */
 }
 
 .navbar-left {
@@ -62,11 +63,11 @@ body {
 }
 
 /* Navigation links hover effect */
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: #007bff; /* Same color as hover effect */
     border-bottom: 2px solid #007bff; /* Same border as hover effect */
 }
-
 
 .navbar-right {
     padding-right: 50px;
@@ -105,12 +106,14 @@ body {
     text-align: center;
     color: #000;
     margin-top: 10px;
+    animation: fadeIn 1.5s; /* Fade-in animation for welcome text */
 }
 
 .welcome-text p {
     font-size: 46px;
     color: #000;
     margin-bottom: 25px;
+    animation: slideIn 1.5s; /* Slide-in animation */
 }
 
 /* Bold the strong/b elements explicitly */
@@ -127,9 +130,93 @@ strong, b {
     border: 2px solid transparent; /* Initial border */
     transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
     text-decoration: none; /* No underline */
+    animation: bounce 1s infinite; /* Bouncing animation */
 }
 
 .getstarted:hover {
     background-color: transparent; /* Change to transparent on hover */
     border-color: #007bff; /* Blue border on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .welcome-text p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .welcome-text p {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-left, .navbar-right {
+        padding: 0 10px;
+    }
+
+    .welcome-text p {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .welcome-text p {
+        font-size: 28px;
+    }
+
+    .getstarted {
+        padding: 8px 12px;
+    }
 }
